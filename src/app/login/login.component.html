@@ -1,0 +1,11 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <label for="email">User Name: </label>
+    <input id="email" type="text" formControlName="email">
+  
+    <label for="password">Password: </label>
+    <input id="password" type="password" formControlName="password">
+  
+    <input type="submit" value="Login" [disabled]="!loginForm.valid">
+    <input type="button" value="Reset" (click)="onReset()">
+  </form>
